@@ -1,5 +1,6 @@
 // accountInfo
 // charInfo
+// PalyerInfo (accountInfo + charInfo)
 
 type AccountInfo = {
   id: number;
@@ -18,6 +19,16 @@ type CharInfo = {
 };
 
 const char: CharInfo = {
+  nickname: "mario",
+  level: 100,
+};
+
+// intersection
+type PalyerInfo = AccountInfo & CharInfo;
+
+const player: PalyerInfo = {
+  id: 123,
+  name: "William",
   nickname: "mario",
   level: 100,
 };
